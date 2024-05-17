@@ -93,6 +93,14 @@ header {
   padding-bottom: 30px;
   padding-top: 20px;
   width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.header__wrap.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .header__list {
@@ -142,6 +150,36 @@ header {
   border-radius: 106px;
 }
 
+.phone-tab {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 20px 0;
+  }
+  header svg {
+    width: 211px;
+    height: 50px;
+  }
+  .header__link-wrap {
+    display: flex;
+    gap: 77px;
+    align-items: center;
+  }
+  .phone-tab {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .phone-tab svg {
+    width: 14px;
+    height: 14px;
+  }
+  .header__wrap {
+    top: 94px;
+  }
+}
 footer {
   background: green;
 }
